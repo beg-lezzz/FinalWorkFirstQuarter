@@ -60,3 +60,13 @@ string[] FillThreeDigitsArray(string[] stringArray)
     Array.Resize(ref outArray, counter);
     return outArray;
 }
+
+//Метод для печати одномерного массива
+void PrintArray(string[] stringArray)
+{
+    for (int i = 0; i < stringArray.Length - 1; i++)
+    {
+        Console.Write(stringArray[i] + ", ");
+    }
+    Console.WriteLine(stringArray[stringArray.Length - 1]);
+}
