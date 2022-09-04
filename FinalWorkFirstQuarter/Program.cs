@@ -43,3 +43,20 @@ string[] FillArray(int arrLength)
 
     return stringArray;
 }
+
+//метод для создания нового масиива 3-х значных элементов исходного массива
+string[] FillThreeDigitsArray(string[] stringArray)
+{
+    int counter = 0;
+    string[] outArray = new string[stringArray.Length];
+    for (int i = 0; i < stringArray.Length; i++)
+    {
+        if (stringArray[i].Length < 4)
+        {
+            outArray[counter] = stringArray[i];
+            counter++;
+        }
+    }
+    Array.Resize(ref outArray, counter);
+    return outArray;
+}
