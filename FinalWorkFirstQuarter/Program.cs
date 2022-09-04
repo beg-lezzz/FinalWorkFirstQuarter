@@ -30,3 +30,16 @@ string UserStringData(string inputString)
     
     return userString;
 }
+
+//Метод для заполнения одномерного массива с клавиатуры
+string[] FillArray(int arrLength)
+{
+    string[] stringArray = new string[arrLength];
+
+    for (int i = 0; i < arrLength; i++)
+    {
+        stringArray[i] = UserStringData($"Введите {i + 1}-й элемент массива");
+    }
+
+    return stringArray;
+}
