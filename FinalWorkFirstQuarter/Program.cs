@@ -1,6 +1,4 @@
-﻿Console.Clear();
-
-//метод запроса информации у пользователя (число)
+﻿//метод запроса информации у пользователя (число)
 int UserNumData(string inputString)
 {
     Console.Write(inputString + ": ");
@@ -70,3 +68,18 @@ void PrintArray(string[] stringArray)
     }
     Console.WriteLine(stringArray[stringArray.Length - 1]);
 }
+
+// основной метод для вызова последовательности остальных методов
+void MainMethod()
+{
+    Console.Clear();
+    string[] outArray = FillArray(UserNumData("Задайте число элементов массива"));
+    Console.Clear();
+    Console.WriteLine("Первоначальный массив: ");
+    PrintArray(outArray);
+    Console.WriteLine();
+    Console.WriteLine("Массив с элементами 3 и менее символов: ");
+    PrintArray(FillThreeDigitsArray(outArray));
+}
+
+MainMethod();
