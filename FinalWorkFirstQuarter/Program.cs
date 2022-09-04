@@ -16,3 +16,17 @@ int UserNumData(string inputString)
         return 0;
     }
 }
+
+//метод запроса информации у пользователя (непустая строка)
+string UserStringData(string inputString)
+{
+    Console.Write(inputString + ": ");
+    string userString = Console.ReadLine();
+    if (userString == String.Empty)
+    {
+        Console.WriteLine("Ошибка ввода");
+        System.Environment.Exit(1);
+    }
+    
+    return userString;
+}
